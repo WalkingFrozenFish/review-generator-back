@@ -7,17 +7,17 @@ const app = express();
 
 app.use(cors())
 
-app.get("/getrecomendation/:id", async (request, response) => {
+app.get("/recomendation/:id", async (request, response) => {
     const data = await getDocumentData(request.params.id)
     response.send(data)
 })
 
-app.get("/geterror/:id", async (request, response) => {
+app.get("/error/:id", async (request, response) => {
     const data = await getDocumentData(request.params.id)
     response.send(data)
 })
 
-app.get("/getresult/:id", async (request, response) => {
+app.get("/result/:id", async (request, response) => {
     const data = await getDocumentData(request.params.id)
     response.send(data)
 })
